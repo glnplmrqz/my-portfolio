@@ -386,6 +386,7 @@ body {
     text-align: justify;
   }
 }
+
 /* Skills Section */
 #skills {
   padding: 100px 10%;
@@ -429,9 +430,81 @@ body {
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  #skills {
+    padding: 80px 8%;
+  }
+
   .skills-card {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  #skills h1 {
+    font-size: 2.3rem;
+  }
+
+  .skill-box {
+    padding: 1.5rem;
+  }
+
+  .skill-icon img {
+    width: 70px;
+  }
+
+  .skill-box h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #skills {
+    padding: 60px 5%;
+  }
+
+  #skills h1 {
+    font-size: 2rem;
+  }
+
+  .skills-card {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-box {
+    padding: 1.2rem;
+  }
+
+  .skill-icon img {
+    width: 60px;
+  }
+
+  .skill-box h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #skills h1 {
+    font-size: 1.8rem;
+  }
+
+  .skills-card {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-box {
+    padding: 1rem;
+  }
+
+  .skill-icon img {
+    width: 50px;
+  }
+
+  .skill-box h3 {
+    font-size: 0.9rem;
   }
 }
 
@@ -453,9 +526,50 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 1200px) {
+  #project {
+    padding: 80px 8%;
+  }
+
+  #project h1 {
+    font-size: 2.3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #project img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 992px) {
+  #project h1 {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+
+  #project img {
+    max-width: 400px;
+  }
+}
+
 @media (max-width: 768px) {
+  #project {
+    padding: 60px 5%;
+  }
+
+  #project h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
   #project img {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  #project h1 {
+    font-size: 1.8rem;
   }
 }
 
@@ -550,10 +664,104 @@ body {
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  #contact {
+    padding: 80px 8%;
+  }
+
   .contact-details {
+    max-width: 550px;
+  }
+
+  .contact-details h1 {
+    font-size: 2.3rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-details {
+    max-width: 500px;
+    padding: 2.5rem;
+  }
+
+  .contact-details h1 {
+    font-size: 2.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+  }
+
+  .btn-message {
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact {
+    padding: 60px 5%;
+  }
+
+  .contact-details {
+    max-width: 100%;
     padding: 2rem;
   }
+
+  .contact-details h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.9rem;
+  }
+
+  .btn-message {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-details {
+    padding: 1.5rem;
+  }
+
+  .contact-details h1 {
+    font-size: 1.8rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .btn-message {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.85rem;
+  }
+}
 
   #btn-contact {
     margin-left: 0;
