@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="homepage.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+        <title>Portfolio | GP</title>
+    </head>
+    <body>
+        <header id="header">
+            <nav id="nav-bar">
+                <div id="brand-logo">
+                    <a href="homepage.html">
+                       <h1>GP</h1>
+                    </a>
+                </div>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <div id="nav-links">
+                  <button id="close-menu" aria-label="Close menu">✕</button>
+                    <ul>
+                        <li><a class="link" href="#about">About</a></li>
+                        <li><a class="link" href="#skills">Skills</a></li>
+                        <li><a class="link" href="#project">Project</a></li>
+                        <li><a class="link" href="#contact" id="btn-contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="home-page">
+                <div id="row">
+                <div id="column-one">
+                    <h1>Hi, I'm <span>Paul</span></h1>
+                    <p>Aspiring <span id="my-dream"></span></p>
+                      <div id="social-buttons">
+                        <a href="https://www.facebook.com/glnplmrqz/" id="facebook" target="_blank">
+                        <img src="../IMAGES/facebook.svg" alt="facebook"/>
+                        </a>
+                        <a href="https://www.instagram.com/glnplmrqz/" id="instagram" target="_blank">
+                          <img src="../IMAGES/instagram.svg" alt="instagram"/>
+                        </a>
+                        <a href="https://t.me/glnplmrqz" id="telegram" target="_blank">
+                          <img src="../IMAGES/telegram.svg" alt="telegram"/>
+                        </a>
+                        <a href="https://github.com/glnplmrqz" id="github" target="_blank">
+                          <img src="../IMAGES/github.svg" alt="github"/>
+                        </a>
+                      </div>
+                </div>
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                <script src="script.js"></script>
+                <div id="column-two">
+                    <img src="../IMAGES/profile-pic.png"/>
+                </div>
+            </div>
+            </div>
+        </header>
+        <section id="about">
+          <div id="about-box">
+              <div id="about-profile">
+                  <img src="../IMAGES/programmer.png" alt="Me"/>
+              </div>
+              <div id="about-content">
+                  <h2>About Me</h2>
+                  <p>Hi, I'm Glen Paul Marquez and currently 2nd year student at Colegio de Montalban. I am pursuing a <span>Bachelor of Technology and Livelihood Education Major in Information and Communication</span>. Since I was a kid, my dream to create a website, software, and games as well. My first programming language that I've learned is <span>Java Programming Language</span> when I was in grade 11 during my senior high school and since then I learned other basic programming languages such as <span>C, C++ and Python</span>. Currently, I'm studying Web Development such as <span>HTML, CSS and JavaScript</span>. My biggest dreams to become a <span>Full Stack Developer</span>. </p>
+              </div>
+          </div>
+      </section>
+      
+        <section id="skills">
+            <h1>SKILLS</h1>
+            <p>I have basic knowledge in the following Programming Languages:</p>
+            <div class="skills-card">
+                <div class="skill-box">
+                  <div class="skill-icon">
+                    <img src="../IMAGES/C.png" alt="C" width="150px">
+                  </div>
+                  <h3>C Programming Language</h3>
+                </div>
+                <div class="skill-box">
+                  <div class="skill-icon">
+                    <img src="../IMAGES/C++.png" alt="C++" width="150px">
+                  </div>
+                  <h3>C++ Programming Language</h3>
+                </div>
+                <div class="skill-box">
+                  <div class="skill-icon">
+                    <img src="../IMAGES/Java.png" alt="Java" width="150px">
+                  </div>
+                  <h3>Java Programming Language</h3>
+                </div>
+                <div class="skill-box">
+                  <div class="skill-icon">
+                    <img src="../IMAGES/Python.png" alt="Python" width="150px">
+                  </div>
+                  <h3>Python Programming Language</h3>
+                </div>
+                <div class="skill-box">
+                  <div class="skill-icon">
+                    <img src="../IMAGES/HTML.png" alt="HTML" width="150px">
+                    <img src="../IMAGES/CSS.png" alt="CSS" width="150px">
+                  </div>
+                  <h3>HTML & CSS</h3>
+                </div>
+                <div class="skill-box">
+                  <div class="skill-icon">
+                    <img src="../IMAGES/JavaScript.png" alt="JavaScript" width="150px">
+                  </div>
+                  <h3>JavaScript</h3>
+                </div>
+              </div>
+        </section>
+        <section id="project">
+          <div id="project-box">
+            <h1>MY PROJECTS</h1>
+            <img src="../IMAGES/coming soon.gif" alt="Coming Soon">
+          </div>
+        </section>
+        <section id="contact">
+            <div class="contact-details">
+                <h1>Contact Us</h1>
+                <form>
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Enter your message" required></textarea>
+                  </div>
+                  <button type="submit" class="btn-message">Send Message</button>
+                </form>
+              </div>
+        </section>
+        <footer>
+            <a href="#header"><p>&copy; Glen Paul Marquez</p></a>
+        </footer>
+    </body>
+</html>
