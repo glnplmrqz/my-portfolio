@@ -310,26 +310,82 @@ body {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   #about-box {
     flex-direction: column;
     text-align: center;
   }
 
   #about-profile img {
-    width: 350px;
-    margin: 2rem 0;
+    width: 400px;
+    margin: 3rem 0;
   }
 
+  #about-content {
+    flex: 1;
+  }
+
+  #about-content h2 {
+    font-size: 2.3rem;
+  }
+
+  #about-content p {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 992px) {
+  #about-profile img {
+    width: 350px;
+    margin: 2.5rem 0;
+  }
+
+  #about-content h2 {
+    font-size: 2.1rem;
+  }
+
+  #about-content p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding: 3% 5%;
+  }
+
+  #about-profile img {
+    width: 300px;
+    margin: 2rem 0;
+  }
+  
   #about-content h2 {
     font-size: 2rem;
   }
 
   #about-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    text-align: justify;
+    line-height: 1.6;
   }
 }
 
+@media (max-width: 576px) {
+  #about-profile img {
+    width: 250px;
+    margin: 1.5rem 0;
+  }
+
+  #about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  #about-content p {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+}
 /* Skills Section */
 #skills {
   padding: 100px 10%;
