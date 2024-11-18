@@ -8,7 +8,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, rgba(240, 240, 240, 0.9) 0%, rgba(255, 255, 153, 0.8) 100%);
+  background:linear-gradient(to top, rgba(0,0,0,0.5)50%, rgba(0,0,0,0.5)50%), url(../IMAGES/bg.gif);
 }
 
 /* Header and Navigation */
@@ -33,7 +33,7 @@ body {
 }
 
 #brand-logo a h1 {
-  color: #1a73e8;
+  color: yellow;
   font-size: 2.5rem;
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 .link {
-  color: #1a73e8;
+  color: white;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
@@ -60,7 +60,7 @@ body {
 }
 
 .link:hover {
-  color: #1557b0;
+  color: yellow;
 }
 
 #menu-toggle {
@@ -74,7 +74,7 @@ body {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #1a73e8;
+  background-color: white;
   margin: 5px 0;
   transition: 0.4s;
 }
@@ -86,7 +86,7 @@ body {
   right: 3rem;
   background: none;
   border: none;
-  color: #1a73e8;
+  color: white;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -103,7 +103,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #f8f9fa;
+    background-color: #333;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -125,7 +125,11 @@ body {
   }
 
   #nav-links a {
-    color: #1a73e8;
+    color: white;
+  }
+
+  #nav-links a:hover {
+    color: yellow;
   }
 
   #close-menu {
@@ -133,7 +137,7 @@ body {
   }
 
   #brand-logo a h1 {
-    color: #1a73e8;
+    color: yellow;
     font-size: 2.5rem;
   }
   
@@ -165,23 +169,23 @@ body {
 
 #column-one h1 {
   font-size: 4.5rem;
-  color: #333;
+  color: white;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 #column-one h1 span {
-  color: #1557b0;
+  color: yellow;
 }
 
 #column-one p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: white;
 }
 
 #my-dream {
-  color: #1557b0;
+  color: yellow;
   font-weight: 700;
 }
 
@@ -196,6 +200,7 @@ body {
   border-radius: 50%;
   display: flex;
   align-items: center;
+  background: white;
   justify-content: center;
   transition: all 0.3s ease;
 }
@@ -289,10 +294,20 @@ body {
 
 #about-content {
   flex: 5;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#about-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 #about-content h2 {
-  color: #1a73e8;
+  color: blue;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -301,12 +316,12 @@ body {
 #about-content p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #2c3e50;
+  color: black;
   text-align: justify;
 }
 
 #about-content span {
-  color: #1a73e8;
+  color: blue;
   font-weight: 500;
 }
 
@@ -394,9 +409,14 @@ body {
 }
 
 #skills h1 {
-  color: #1a73e8;
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 1rem;
+}
+
+#skills p {
+  font-style: italic;
+  color: white;
 }
 
 .skills-card {
@@ -515,7 +535,7 @@ body {
 }
 
 #project h1 {
-  color: #1a73e8;
+  color: white;
   font-size: 2.5rem;
   margin-bottom: 3rem;
 }
@@ -786,7 +806,7 @@ footer {
 }
 
 footer a {
-  color: #1a73e8;
+  color: white;
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -794,5 +814,5 @@ footer a {
 }
 
 footer a:hover {
-  color: #1557b0;
+  color: yellow;
 }
