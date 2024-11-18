@@ -543,7 +543,12 @@ body {
 #project img {
   max-width: 500px;
   border-radius: 15px;
+  transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#project img:hover {
+  transform: translateY(-10px);
 }
 
 @media (max-width: 1200px) {
