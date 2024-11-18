@@ -231,6 +231,10 @@ body {
   transition: all 0.3s ease;
 }
 
+#column-two img:hover {
+  transform: translateY(-10px);
+}
+
 @media (max-width: 1024px) {
   #row {
     flex-direction: column;
@@ -290,6 +294,11 @@ body {
   width: 450px;
   border-radius: 50%;
   margin: 4rem 3rem;
+  transition: all 0.3s ease;
+}
+
+#about-profile img:hover {
+  transform: translateY(-10px);
 }
 
 #about-content {
