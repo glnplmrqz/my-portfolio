@@ -108,8 +108,6 @@ body {
   width: var(--nav-width);
   background-color: var(--bg-primary);
   height: 100vh;
-  max-height: 100vh;
-  min-height: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -120,7 +118,6 @@ body {
   transition: var(--transition);
   z-index: 1000;
   justify-content: space-between;
-  overflow-y: auto;
 }
 
 .profile-info {
@@ -653,7 +650,9 @@ input:checked + .slider:before {
 
   .sidebar {
     transform: translateX(-100%);
-    width: 280px;
+    width: 100%;
+    max-width: 768px;
+    height: 100vh;
   }
 
   .sidebar.active {
