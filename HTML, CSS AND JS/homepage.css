@@ -651,9 +651,6 @@ input:checked + .slider:before {
   .sidebar {
     transform: translateX(-100%);
     width: 280px;
-    justify-content: flex-start;
-    overflow-y: auto;
-    display: flex;
   }
 
   .sidebar.active {
