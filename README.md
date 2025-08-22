@@ -1,12 +1,12 @@
-<div align="center">
-https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
-https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
-https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
-https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white
-</div>
+**WEBSITE PREVIEW **
+Light Mode: 
+<img width="1366" height="731" alt="image" src="https://github.com/user-attachments/assets/8993b3a8-da33-4ec4-b613-a84eb7af00f4" />
+
+Dark Mode: 
+<img width="1366" height="730" alt="image" src="https://github.com/user-attachments/assets/7d042f57-b920-4a9d-a332-00104302bd29" />
 
 🚀 About The Project
-A modern, responsive portfolio website showcasing my skills, projects, and journey as a developer. Built with pure HTML, CSS, and JavaScript to demonstrate fundamental web development skills.
+A modern, responsive portfolio website showcasing my skills, projects, and journey as a developer. Built with pure HTML, CSS, and JavaScript to demonstrate fundamental web development skills. (https://glnplmrqz.vercel.app/)
 
 ✨ Features
 Responsive Design: Optimized for desktop, tablet, and mobile devices
@@ -33,9 +33,9 @@ Navigation: Intuitive menu with smooth scrolling
 
 🚀 Getting Started
 Prerequisites
-Web browser (Chrome, Firefox, Safari, Edge)
-Code editor (VS Code recommended)
-Git installed locally
+- Web browser (Chrome, Firefox, Safari, Edge)
+- Code editor (VS Code recommended)
+- Git installed locally
 
 Installation:
 1. Clone the repository:
