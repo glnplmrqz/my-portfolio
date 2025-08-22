@@ -515,6 +515,7 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .project-card:hover {
@@ -874,6 +875,4 @@ input:checked + .slider:before {
   .section-title {
     font-size: 3.2rem;
   }
-
 }
-
