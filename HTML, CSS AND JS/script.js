@@ -187,27 +187,29 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
   const navLinks = document.querySelectorAll(".nav-links a");
 
-  // Toggle sidebar
+  // Defensive: force sidebar scrollability
+  sidebar.style.overflowY = "auto";
+  sidebar.style.maxHeight = "100vh";
+  sidebar.style.minHeight = "0";
+
   function toggleSidebar() {
     menuToggle.classList.toggle("active");
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
-
-    // Prevent body scrolling when menu is open
     if (sidebar.classList.contains("active")) {
       document.body.style.overflow = "hidden";
+      // Optional: Scroll to bottom so dark mode/footer are always visible
+      sidebar.scrollTop = sidebar.scrollHeight;
     } else {
       document.body.style.overflow = "";
     }
   }
 
-  // Add click event to hamburger menu
   menuToggle.addEventListener("click", function (e) {
     e.stopPropagation();
     toggleSidebar();
   });
 
-  // Close sidebar when clicking on overlay
   overlay.addEventListener("click", function () {
     menuToggle.classList.remove("active");
     sidebar.classList.remove("active");
@@ -215,7 +217,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "";
   });
 
-  // Close sidebar when clicking on a nav link (mobile)
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       if (window.innerWidth <= 768) {
@@ -227,10 +228,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Close sidebar when clicking outside (desktop)
   document.addEventListener("click", function (e) {
     if (window.innerWidth > 768) return;
-
     if (
       sidebar.classList.contains("active") &&
       !sidebar.contains(e.target) &&
@@ -242,46 +241,4 @@ document.addEventListener("DOMContentLoaded", function () {
       document.body.style.overflow = "";
     }
   });
-
-  // Project slider functionality
-  const track = document.querySelector(".slider-track");
-  const cards = document.querySelectorAll(".project-card");
-  const nextBtn = document.querySelector(".slider-btn-right");
-  const prevBtn = document.querySelector(".slider-btn-left");
-
-  if (track && cards.length > 0) {
-    let currentIndex = 0;
-    const cardWidth = cards[0].offsetWidth + 24; // width + margin
-
-    function updateSlider() {
-      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-
-      // Disable/enable buttons based on position
-      prevBtn.disabled = currentIndex === 0;
-      nextBtn.disabled = currentIndex >= cards.length - 1;
-    }
-
-    nextBtn.addEventListener("click", () => {
-      if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        updateSlider();
-      }
-    });
-
-    prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-      }
-    });
-
-    // Initialize slider
-    updateSlider();
-
-    // Handle window resize
-    window.addEventListener("resize", () => {
-      const newCardWidth = cards[0].offsetWidth + 24;
-      track.style.transform = `translateX(-${currentIndex * newCardWidth}px)`;
-    });
-  }
 });
