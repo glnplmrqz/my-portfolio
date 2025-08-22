@@ -546,7 +546,7 @@ input:checked + .slider:before {
 }
 
 .project-card a {
-  color: white;
+  color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   padding: 15px;
