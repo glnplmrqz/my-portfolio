@@ -674,7 +674,7 @@ input:checked + .slider:before {
   }
 
   #menuToggle {
-    display: flex;
+    display: block;
   }
 
   .sidebar {
