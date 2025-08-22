@@ -118,6 +118,8 @@ body {
   transition: var(--transition);
   z-index: 1000;
   justify-content: space-between;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 .profile-info {
