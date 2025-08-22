@@ -518,6 +518,10 @@ input:checked + .slider:before {
   align-items: center;
 }
 
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
 .project-card img {
   width: 100%;
   max-width: 320px;
@@ -871,4 +875,5 @@ input:checked + .slider:before {
   .section-title {
     font-size: 3.2rem;
   }
+
 }
