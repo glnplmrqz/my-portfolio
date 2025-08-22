@@ -40,9 +40,9 @@ Prerequisites
 
 Installation:
 1. Clone the repository:
-- git clone https://github.com/glnplmrqz/my-portfolio.git
-2. Navigate to the project directory:
-- cd my-portfolio
+   - git clone https://github.com/glnplmrqz/my-portfolio.git
+3. Navigate to the project directory:
+   - cd my-portfolio
 3. Open index.html in your browser or use a local server.
 
 🔧 Customization
