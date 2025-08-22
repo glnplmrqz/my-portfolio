@@ -3,20 +3,17 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Glen Paul Marquez - Aspiring Full Stack Developer. Portfolio showcasing web development projects and programming skills." />
-  <meta name="keywords" content="web developer, full stack developer, portfolio, HTML, CSS, JavaScript, programming" />
-  <meta name="author" content="Glen Paul Marquez" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio | Glen Paul Marquez</title>
-  <link rel="icon" type="image/x-icon" href="../IMAGES/programmer.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="homepage.css" />
+  <link rel="icon" type="image/x-icon" href="../IMAGES/programmer.png"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  </script>
+  <link rel="stylesheet" href="homepage.css"/>
 </head>
 
 <body>
 
-  <!-- Hamburger Menu Button -->
+ <!-- Hamburger Menu Button -->
   <div id="menuToggle">
     <div class="hamburger">
       <span></span>
@@ -25,31 +22,28 @@
     </div>
   </div>
 
-  <!-- Sidebar -->
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Sidebar Navigation -->
   <aside class="sidebar" id="sidebar">
-    <!-- Top (Profile) -->
     <div class="profile-info">
       <a href="#home">Glen Paul Marquez</a>
       <div id="download-resume">
-        <a href="RESUME.pdf" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-download" style="margin-right:8px;"></i> Resume
-        </a>
+        <a href="RESUME.pdf" target="_blank"> <i class="fas fa-download" style="margin-right:8px;"></i>
+          Resume</a>
       </div>
     </div>
 
-    <!-- Middle (scrollable nav) -->
-    <div class="sidebar-content">
-      <nav class="nav-links" id="nav-links">
-        <ul>
-          <li><a href="#home" class="active"><i class="fas fa-home"></i><span>Home</span></a></li>
-          <li><a href="#about"><i class="fas fa-user"></i><span>About</span></a></li>
-          <li><a href="#skills"><i class="fas fa-code"></i><span>Skills</span></a></li>
-          <li><a href="#projects"><i class="fas fa-project-diagram"></i><span>Projects</span></a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> <span>About</span></a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> <span>Skills</span></a></li>
+        <li><a href="#projects"><i class="fas fa-project-diagram"></i> <span>Projects</span></a></li>
+      </ul>
+    </nav>  
 
-    <!-- Bottom (toggle + footer) -->
     <div class="theme-toggle">
       <span class="toggle-label">Dark Mode</span>
       <label class="toggle-switch">
@@ -59,12 +53,10 @@
     </div>
 
     <div id="footer">
-      <p>&copy; Glen Paul Marquez</p>
+      <p>&copy Glen Paul Marquez</p>
     </div>
-  </aside>
 
-  <!-- Overlay -->
-  <div class="overlay" id="overlay"></div>
+  </aside>
 
   <!-- Main Content -->
   <main class="main-content">
@@ -76,19 +68,24 @@
           <p class="static-text">Aspiring <span class="typing-text"></span></p>
 
           <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/glnplmrqz" target="_blank" rel="noopener noreferrer"
-              class="social-btn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/glnplmrqz" target="_blank" rel="noopener noreferrer" class="social-btn"><i
-                class="fab fa-github"></i></a>
-            <a href="https://t.me/glnplmrqz" target="_blank" rel="noopener noreferrer" class="social-btn"><i
-                class="fab fa-telegram"></i></a>
-            <a href="mailto:glenpaulmarquez@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/glnplmrqz" target="_blank" class="social-btn" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/glnplmrqz" target="_blank" class="social-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://t.me/glnplmrqz" target="_blank" class="social-btn" title="LinkedIn">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="mailto:glenpaulmarquez@gmail.com" class="social-btn" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
           </div>
-        </div>
 
+        </div>
+          
         <div class="home-image">
-          <img src="../IMAGES/Formal Pic.png"
-            alt="Professional photo of Glen Paul Marquez, aspiring full stack developer">
+          <img src="../IMAGES/Formal Pic.png" alt="Glen Paul Marquez">
         </div>
       </div>
     </section>
@@ -98,13 +95,9 @@
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>Hi, I'm Glen Paul Marquez and currently a 3rd year student at Colegio de Montalban. I am pursuing a
-            <span>Bachelor of Technology and Livelihood Education Major in Information and Communication</span>.</p>
-          <p>Since I was a kid, I've dreamed of creating websites, software, and games. My first programming language
-            was <span>Java</span> when I was in grade 11, and since then I've learned other basic programming languages
-            such as <span>C, C++ and Python</span>.</p>
-          <p>Currently, I'm studying Web Development including <span>HTML, CSS and JavaScript</span>. My biggest dream
-            is to become a <span>Full Stack Developer</span>.</p>
+          <p>Hi, I'm Glen Paul Marquez and currently a 3rd year student at Colegio de Montalban. I am pursuing a <span>Bachelor of Technology and Livelihood Education Major in Information and Communication</span>.</p>
+          <p>Since I was a kid, I've dreamed of creating websites, software, and games. My first programming language was <span>Java</span> when I was in grade 11 during senior high school, and since then I've learned other basic programming languages such as <span>C, C++ and Python</span>.</p>
+          <p>Currently, I'm studying Web Development including <span>HTML, CSS and JavaScript</span>. My biggest dream is to become a <span>Full Stack Developer</span>.</p>
         </div>
       </div>
     </section>
@@ -115,55 +108,65 @@
       <p style="text-align: center;">I have basic knowledge in the following Programming Languages:</p>
       <div class="skills-grid">
         <div class="skill-card">
-          <div class="skill-icon"><img src="../IMAGES/C.png" alt="C"></div>
-          <h3>C</h3>
+          <div class="skill-icon">
+            <img src="../IMAGES/C.png" alt="C Language">
+          </div>
+          <h3>C Programming Language</h3>
         </div>
         <div class="skill-card">
-          <div class="skill-icon"><img src="../IMAGES/C++.png" alt="C++"></div>
-          <h3>C++</h3>
+          <div class="skill-icon">
+            <img src="../IMAGES/C++.png" alt="C++ Language">
+          </div>
+          <h3>C++ Programming Language</h3>
         </div>
         <div class="skill-card">
-          <div class="skill-icon"><img src="../IMAGES/Java.png" alt="Java"></div>
-          <h3>Java</h3>
+          <div class="skill-icon">
+            <img src="../IMAGES/Java.png" alt="Java Language">
+          </div>
+          <h3>Java Programming Language</h3>
         </div>
         <div class="skill-card">
-          <div class="skill-icon"><img src="../IMAGES/Python.png" alt="Python"></div>
-          <h3>Python</h3>
+          <div class="skill-icon">
+            <img src="../IMAGES/Python.png" alt="Python Language">
+          </div>
+          <h3>Python Programming Language</h3>
         </div>
         <div class="skill-card skill-html-css">
           <div class="skill-icon">
-            <img src="../IMAGES/HTML.png" alt="HTML">
-            <img src="../IMAGES/CSS.png" alt="CSS">
-            <img src="../IMAGES/JavaScript.png" alt="JS">
+            <img src="../IMAGES/HTML.png" alt="HTML5" style="margin-right: 10px;">
+            <img src="../IMAGES/CSS.png" alt="CSS3">
+            <img src="../IMAGES/JavaScript.png" alt="JavaScript">
           </div>
-          <h3>HTML, CSS & JavaScript</h3>
+          <h3>HTML5, CSS3, & JavaScript</h3>
         </div>
       </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
-      <h2 class="section-title">Projects</h2>
-      <div class="project-slider">
-        <button class="slider-btn slider-btn-left">&#10094;</button>
-        <div class="slider-track">
-          <div class="project-card">
-            <img src="../IMAGES/website-shs.png" alt="Website Project">
-            <h3>First Website Project</h3>
-            <a href="https://glnplmrqz.github.io/website-shs" target="_blank">View Project</a>
-          </div>
-          <div class="project-card">
-            <img src="../IMAGES/cdm-mock.png" alt="Colegio de Montalban mock-up">
-            <h3>Colegio de Montalban Mock-up</h3>
-            <a href="https://glnplmrqz.github.io/cdm-website-project" target="_blank">View Project</a>
-          </div>
-        </div>
-        <button class="slider-btn slider-btn-right">&#10095;</button>
+    <h2 class="section-title">Projects</h2>
+    <div class="project-slider">
+    <button class="slider-btn slider-btn-left" aria-label="Previous Project">&#10094;</button>
+
+    <div class="slider-track">
+      <!-- Example project cards. Add/remove as needed -->
+      <div class="project-card">
+        <img src="../IMAGES/website-shs.png" alt="Website-SHS">
+        <h3>First Website Project using HTML, CSS & JavaScript (SHS)</h3>
+        <a href="https://glnplmrqz.github.io/website-shs" target="_blank">View Project</a>
       </div>
-    </section>
-  </main>
+
+      <div class="project-card">
+        <img src="../IMAGES/cdm-mock.png" alt="CDM Mock-up Website">
+        <h3>Colegio de Montalban Mock-up Website</h3>
+        <a href="https://glnplmrqz.github.io/cdm-website-project" target="_blank">View Project</a>
+      </div>
+
+    </div>
+    <button class="slider-btn slider-btn-right" aria-label="Next Project">&#10095;</button>
+  </div>
+</section>
 
   <script src="script.js"></script>
 </body>
-
 </html>

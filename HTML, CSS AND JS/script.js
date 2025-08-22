@@ -56,8 +56,9 @@ window.addEventListener("scroll", function () {
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
 
-    if (window.pageYOffset >= sectionTop - 150) {
+    if (pageYOffset >= sectionTop - 100) {
       currentSection = section.getAttribute("id");
     }
   });
@@ -72,14 +73,11 @@ window.addEventListener("scroll", function () {
 
 // Simple typing effect
 document.addEventListener("DOMContentLoaded", function () {
-  const texts = ["Full Stack Developer", "Web Developer", "Software Engineer"];
+  const texts = ["Full Stack Developer"];
   let count = 0;
   let index = 0;
   let currentText = "";
   let letter = "";
-  const typingElement = document.querySelector(".typing-text");
-
-  if (!typingElement) return; // Safety check
 
   function type() {
     if (count === texts.length) {
@@ -89,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     currentText = texts[count];
     letter = currentText.slice(0, ++index);
 
-    typingElement.textContent = letter;
+    document.querySelector(".typing-text").textContent = letter;
 
     if (letter.length === currentText.length) {
       setTimeout(erase, 1500);
@@ -100,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function erase() {
     letter = currentText.slice(0, --index);
-    typingElement.textContent = letter;
+    document.querySelector(".typing-text").textContent = letter;
 
     if (letter.length === 0) {
       count++;
@@ -112,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Start typing effect
-  setTimeout(type, 500);
+  setTimeout(type, 1000);
 });
 
 // --- Project Slider Functionality ---
@@ -122,37 +120,41 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.querySelector(".slider-btn-left");
   const nextBtn = document.querySelector(".slider-btn-right");
 
-  if (!sliderTrack || !prevBtn || !nextBtn) return; // Safety check
-
   let currentIndex = 0;
-  const totalCards = projectCards.length;
 
-  // Function to get card width including margin
+  // Pure card width (without margin)
   function getCardWidth() {
-    if (!totalCards) return 0;
-    
-    const cardStyle = window.getComputedStyle(projectCards[0]);
-    const cardWidth = projectCards[0].offsetWidth;
-    const marginRight = parseInt(cardStyle.marginRight) || 0;
-    const marginLeft = parseInt(cardStyle.marginLeft) || 0;
-    
-    return cardWidth + marginRight + marginLeft;
+    return projectCards.length ? projectCards[0].offsetWidth : 0;
+  }
+  // Margin between cards (should match your CSS)
+  function getCardMargin() {
+    return projectCards.length > 1
+      ? parseInt(window.getComputedStyle(projectCards[0]).marginRight)
+      : 0;
   }
 
   function updateSlider() {
     const cardWidth = getCardWidth();
-    const offset = currentIndex * cardWidth;
+    const cardMargin = getCardMargin();
+    // Only add margin for cards before last one
+    let offset = currentIndex * (cardWidth + cardMargin);
+    // If at last slide, remove margin so card is flush right
+    if (currentIndex === projectCards.length - 1) {
+      offset = (cardWidth + cardMargin) * (projectCards.length - 1);
+      // Subtract margin for last card
+      offset -= cardMargin;
+    }
     sliderTrack.style.transform = `translateX(-${offset}px)`;
 
-    // Update button states
-    if (totalCards <= 1) {
+    // Disable buttons if no or only one slide
+    if (projectCards.length <= 1) {
       prevBtn.disabled = true;
       nextBtn.disabled = true;
       prevBtn.classList.add("slider-btn-disabled");
       nextBtn.classList.add("slider-btn-disabled");
     } else {
       prevBtn.disabled = currentIndex === 0;
-      nextBtn.disabled = currentIndex >= totalCards - 1;
+      nextBtn.disabled = currentIndex === projectCards.length - 1;
       prevBtn.classList.toggle("slider-btn-disabled", prevBtn.disabled);
       nextBtn.classList.toggle("slider-btn-disabled", nextBtn.disabled);
     }
@@ -166,29 +168,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   nextBtn.addEventListener("click", function () {
-    if (currentIndex < totalCards - 1) {
-      currentIndex++;
-      updateSlider();
-    }
-  });
-
-  // Add keyboard navigation
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "ArrowLeft" && currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    } else if (e.key === "ArrowRight" && currentIndex < totalCards - 1) {
+    if (currentIndex < projectCards.length - 1) {
       currentIndex++;
       updateSlider();
     }
   });
 
   // Responsive: recalculate on window resize
-  let resizeTimeout;
-  window.addEventListener("resize", function() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(updateSlider, 100);
-  });
+  window.addEventListener("resize", updateSlider);
 
   updateSlider(); // Initial state
 });
@@ -200,23 +187,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
   const navLinks = document.querySelectorAll(".nav-links a");
 
-  if (!menuToggle || !sidebar || !overlay) return; // Safety check
-
-  // Ensure proper sidebar layout on mobile
-  function ensureSidebarLayout() {
-    if (window.innerWidth <= 768) {
-      sidebar.style.height = "100vh";
-      sidebar.style.maxHeight = "100vh";
-      sidebar.style.overflowY = "auto";
-    }
-  }
-
+  // Toggle sidebar
   function toggleSidebar() {
     menuToggle.classList.toggle("active");
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
-    ensureSidebarLayout();
-    
+
+    // Prevent body scrolling when menu is open
     if (sidebar.classList.contains("active")) {
       document.body.style.overflow = "hidden";
     } else {
@@ -224,43 +201,87 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function closeSidebar() {
-    menuToggle.classList.remove("active");
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-
+  // Add click event to hamburger menu
   menuToggle.addEventListener("click", function (e) {
     e.stopPropagation();
     toggleSidebar();
   });
 
-  overlay.addEventListener("click", closeSidebar);
+  // Close sidebar when clicking on overlay
+  overlay.addEventListener("click", function () {
+    menuToggle.classList.remove("active");
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    document.body.style.overflow = "";
+  });
 
+  // Close sidebar when clicking on a nav link (mobile)
   navLinks.forEach((link) => {
     link.addEventListener("click", function () {
       if (window.innerWidth <= 768) {
-        closeSidebar();
+        menuToggle.classList.remove("active");
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.style.overflow = "";
       }
     });
   });
 
-  // Close sidebar with Escape key
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape" && sidebar.classList.contains("active")) {
-      closeSidebar();
-    }
-  });
-
+  // Close sidebar when clicking outside (desktop)
   document.addEventListener("click", function (e) {
     if (window.innerWidth > 768) return;
+
     if (
       sidebar.classList.contains("active") &&
       !sidebar.contains(e.target) &&
       !menuToggle.contains(e.target)
     ) {
-      closeSidebar();
+      menuToggle.classList.remove("active");
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+      document.body.style.overflow = "";
     }
   });
+
+  // Project slider functionality
+  const track = document.querySelector(".slider-track");
+  const cards = document.querySelectorAll(".project-card");
+  const nextBtn = document.querySelector(".slider-btn-right");
+  const prevBtn = document.querySelector(".slider-btn-left");
+
+  if (track && cards.length > 0) {
+    let currentIndex = 0;
+    const cardWidth = cards[0].offsetWidth + 24; // width + margin
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+      // Disable/enable buttons based on position
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= cards.length - 1;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex < cards.length - 1) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
+
+    // Initialize slider
+    updateSlider();
+
+    // Handle window resize
+    window.addEventListener("resize", () => {
+      const newCardWidth = cards[0].offsetWidth + 24;
+      track.style.transform = `translateX(-${currentIndex * newCardWidth}px)`;
+    });
+  }
 });
