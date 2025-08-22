@@ -66,5 +66,4 @@ Installation:
 - Suggest new features
 - Submit pull requests for improvements
 
-📞 Contact
-Email: glenpaulmarquez01@gmail.com
+📧 Email: glenpaulmarquez01@gmail.com
