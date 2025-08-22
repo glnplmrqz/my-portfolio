@@ -108,6 +108,8 @@ body {
   width: var(--nav-width);
   background-color: var(--bg-primary);
   height: 100vh;
+  max-height: 100vh;
+  min-height: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -119,7 +121,6 @@ body {
   z-index: 1000;
   justify-content: space-between;
   overflow-y: auto;
-  max-height: 100vh;
 }
 
 .profile-info {
