@@ -122,28 +122,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let currentIndex = 0;
 
-  // Pure card width (without margin)
+  // Function to get card width including margin
   function getCardWidth() {
-    return projectCards.length ? projectCards[0].offsetWidth : 0;
-  }
-  // Margin between cards (should match your CSS)
-  function getCardMargin() {
-    return projectCards.length > 1
-      ? parseInt(window.getComputedStyle(projectCards[0]).marginRight)
-      : 0;
+    if (!projectCards.length) return 0;
+    
+    const cardStyle = window.getComputedStyle(projectCards[0]);
+    const cardWidth = projectCards[0].offsetWidth;
+    const marginRight = parseInt(cardStyle.marginRight) || 0;
+    const marginLeft = parseInt(cardStyle.marginLeft) || 0;
+    
+    return cardWidth + marginRight + marginLeft;
   }
 
   function updateSlider() {
     const cardWidth = getCardWidth();
-    const cardMargin = getCardMargin();
-    // Only add margin for cards before last one
-    let offset = currentIndex * (cardWidth + cardMargin);
-    // If at last slide, remove margin so card is flush right
-    if (currentIndex === projectCards.length - 1) {
-      offset = (cardWidth + cardMargin) * (projectCards.length - 1);
-      // Subtract margin for last card
-      offset -= cardMargin;
-    }
+    const offset = currentIndex * cardWidth;
     sliderTrack.style.transform = `translateX(-${offset}px)`;
 
     // Disable buttons if no or only one slide
@@ -198,8 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.classList.toggle("active");
     if (sidebar.classList.contains("active")) {
       document.body.style.overflow = "hidden";
-      // Optional: Scroll to bottom so dark mode/footer are always visible
-      sidebar.scrollTop = sidebar.scrollHeight;
     } else {
       document.body.style.overflow = "";
     }
