@@ -109,26 +109,27 @@ body {
   width: var(--nav-width);
   background-color: var(--bg-primary);
   height: 100vh;
-<<<<<<< HEAD
-  height: 100dvh;
-=======
->>>>>>> 84c59c2f69d39a3b18177bde51ae82bb029ad765
+  max-height: 100vh;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow);
   transition: var(--transition);
   z-index: 1000;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .sidebar-content {
   flex: 1;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   min-height: 0;
+  overflow-y: auto;
 }
 
 .profile-info {
@@ -244,11 +245,12 @@ body {
 }
 
 #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-top: 1px solid var(--border-color);
-  padding-top: 0.5rem;
-  text-align: center;
-  font-size: 13px;
-  font-style: italic;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
 }
 
 #footer p {
@@ -681,8 +683,8 @@ input:checked + .slider:before {
     transform: translateX(-100%);
     width: 100%;
     max-width: 768px;
-    height: 100vh;  
-    height: 100dvh;  
+    height: 100vh;
+    max-height: 100vh;
     padding: 1.5rem 1rem;
     justify-content: flex-start;
     gap: 0;
@@ -766,8 +768,8 @@ input:checked + .slider:before {
   .sidebar {
     width: 100%;
     padding: 1rem 0.8rem;
-    height: 100vh;  
-    height: 100dvh;  
+    height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
