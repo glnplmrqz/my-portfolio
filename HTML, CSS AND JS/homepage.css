@@ -109,27 +109,22 @@ body {
   width: var(--nav-width);
   background-color: var(--bg-primary);
   height: 100vh;
-  max-height: 100vh;
-  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow);
   transition: var(--transition);
   z-index: 1000;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .sidebar-content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
   min-height: 0;
-  overflow-y: auto;
 }
 
 .profile-info {
@@ -245,12 +240,11 @@ body {
 }
 
 #footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-top: 1px solid var(--border-color);
-  flex-shrink: 0;
-  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  font-size: 13px;
+  font-style: italic;
 }
 
 #footer p {
