@@ -202,15 +202,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!menuToggle || !sidebar || !overlay) return; // Safety check
 
-  // Defensive: force sidebar scrollability
-  sidebar.style.overflowY = "auto";
-  sidebar.style.maxHeight = "100vh";
-  sidebar.style.minHeight = "0";
+  // Ensure proper sidebar layout on mobile
+  function ensureSidebarLayout() {
+    if (window.innerWidth <= 768) {
+      sidebar.style.height = "100vh";
+      sidebar.style.maxHeight = "100vh";
+      sidebar.style.overflowY = "auto";
+    }
+  }
 
   function toggleSidebar() {
     menuToggle.classList.toggle("active");
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
+    ensureSidebarLayout();
     
     if (sidebar.classList.contains("active")) {
       document.body.style.overflow = "hidden";
