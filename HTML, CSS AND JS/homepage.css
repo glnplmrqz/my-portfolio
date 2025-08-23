@@ -632,6 +632,7 @@ input:checked + .slider:before {
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
+    margin: auto;
   }
 
   .skill-card {
@@ -881,3 +882,4 @@ input:checked + .slider:before {
   }
 
 }
+
