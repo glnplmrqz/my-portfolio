@@ -633,6 +633,10 @@ input:checked + .slider:before {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
   }
+
+  .skill-card {
+    width: 85%;
+  }
 }
 
 /* Large mobile devices (≤ 768px) */
@@ -875,4 +879,5 @@ input:checked + .slider:before {
   .section-title {
     font-size: 3.2rem;
   }
+
 }
