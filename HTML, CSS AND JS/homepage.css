@@ -632,7 +632,7 @@ input:checked + .slider:before {
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    margin: auto;
+    justify-items: center;
   }
 
   .skill-card {
@@ -880,6 +880,4 @@ input:checked + .slider:before {
   .section-title {
     font-size: 3.2rem;
   }
-
 }
-
