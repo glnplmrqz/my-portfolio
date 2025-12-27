@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --primary-color: blue;
+  --primary-color: rgb(50, 50, 247);
   --secondary-color: yellow;
-  --bg-primary: #fff;
+  --bg-primary: #f5f5f5;
   --bg-secondary: #f1eded;
   --text-primary: #1f2937;
   --staticText: #333;
@@ -167,7 +167,6 @@ body {
 
 .nav-links {
   flex-grow: 1;
-  margin-top: 2rem;
 }
 
 .nav-links ul {
@@ -181,7 +180,7 @@ body {
 .nav-links a {
   display: flex;
   align-items: center;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 1rem;
   text-decoration: none;
   color: var(--text-primary);
   border-radius: 8px;
@@ -472,7 +471,8 @@ input:checked + .slider:before {
 }
 
 /* Projects Section */
-#projects {
+#projects,
+#achievements {
   background-color: var(--bg-primary);
   border-radius: 12px;
   padding: 3rem 2.5rem;
@@ -483,8 +483,9 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
 }
 
-/* --- Projects Slider Styles --- */
-.project-slider {
+/* --- Projects & Achievements Slider Styles --- */
+.project-slider,
+.achievement-slider {
   position: relative;
   display: flex;
   align-items: center;
@@ -502,7 +503,8 @@ input:checked + .slider:before {
   width: 100%;
 }
 
-.project-card {
+.project-card,
+.achievement-card {
   min-width: 320px;
   max-width: 320px;
   border-radius: 14px;
@@ -518,11 +520,13 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
 }
 
-.project-card:hover {
+.project-card:hover,
+.achievement-card:hover {
   transform: translateY(-10px);
 }
 
-.project-card img {
+.project-card img,
+.achievement-card img {
   width: 100%;
   max-width: 320px;
   border-radius: 12px;
@@ -530,7 +534,8 @@ input:checked + .slider:before {
   object-fit: cover;
 }
 
-.project-card h3 {
+.project-card h3,
+.achievement-card h3 {
   color: var(--primary-color);
   margin-bottom: 0.6rem;
 }
@@ -545,7 +550,8 @@ input:checked + .slider:before {
   transition: all 0.3s ease;
 }
 
-.project-card a:hover {
+.project-card a:hover,
+.achievement-card a:hover {
   background-color: rgb(20, 20, 161);
 }
 
@@ -594,7 +600,8 @@ input:checked + .slider:before {
 }
 
 #about:hover,
-#projects:hover {
+#projects:hover,
+#achievements:hover {
   transform: translateY(-10px);
 }
 
@@ -692,7 +699,8 @@ input:checked + .slider:before {
   }
 
   #about,
-  #projects {
+  #projects,
+  #achievements {
     padding: 2rem 1.5rem;
     margin: 1rem 0;
   }
@@ -715,11 +723,13 @@ input:checked + .slider:before {
     height: 45px;
   }
 
-  .project-card {
+  .project-card,
+  .achievement-card {
     min-width: 280px;
   }
 
-  .project-card img {
+  .project-card img,
+  .achievement-card img {
     height: 180px;
   }
 
@@ -782,12 +792,14 @@ input:checked + .slider:before {
     height: 45px;
   }
 
-  .project-card {
+  .project-card,
+  .achievement-card {
     min-width: 260px;
     max-width: 100%;
   }
 
-  .project-card img {
+  .project-card img,
+  .achievement-card img {
     height: 160px;
   }
 
@@ -817,7 +829,7 @@ input:checked + .slider:before {
     font-size: 1.2rem;
   }
 
-  .about-content{
+  .about-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -858,16 +870,19 @@ input:checked + .slider:before {
     height: 35px;
   }
 
-  .project-card {
+  .project-card,
+  .achievement-card {
     min-width: 240px;
     padding: 1rem 0.5rem;
   }
 
-  .project-card img {
+  .project-card img,
+  .achievement-card img {
     height: 140px;
   }
 
-  .project-card h3 {
+  .project-card h3,
+  .achievement-card h3 {
     font-size: 1rem;
   }
 

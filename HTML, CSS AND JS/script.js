@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
   // Check for saved theme preference or use OS preference
-  const currentTheme = localStorage.getItem("theme") || (prefersDarkScheme.matches ? "dark" : "light");
+  const currentTheme =
+    localStorage.getItem("theme") ||
+    (prefersDarkScheme.matches ? "dark" : "light");
 
   if (currentTheme === "dark") {
     document.body.classList.add("dark-mode");
@@ -172,24 +174,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Project slider functionality
-  const track = document.querySelector(".slider-track");
-  const cards = document.querySelectorAll(".project-card");
-  const nextBtn = document.querySelector(".slider-btn-right");
-  const prevBtn = document.querySelector(".slider-btn-left");
+function initSlider(sliderSelector, cardSelector) {
+  const slider = document.querySelector(sliderSelector);
+  if (!slider) return;
+
+  const track = slider.querySelector(".slider-track");
+  const cards = slider.querySelectorAll(cardSelector);
+  const nextBtn = slider.querySelector(".slider-btn-right");
+  const prevBtn = slider.querySelector(".slider-btn-left");
 
   if (track && cards.length > 0) {
     let currentIndex = 0;
-    const cardWidth = cards[0].offsetWidth + 24; // width + margin
+    let cardWidth = cards[0].offsetWidth + 24;
 
     function updateSlider() {
       track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-
-      // Disable/enable buttons based on position
       prevBtn.disabled = currentIndex === 0;
       nextBtn.disabled = currentIndex >= cards.length - 1;
-      
-      // Add/remove disabled class for styling
       prevBtn.classList.toggle("slider-btn-disabled", prevBtn.disabled);
       nextBtn.classList.toggle("slider-btn-disabled", nextBtn.disabled);
     }
@@ -208,13 +209,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Initialize slider
-    updateSlider();
-
-    // Handle window resize
     window.addEventListener("resize", () => {
-      const newCardWidth = cards[0].offsetWidth + 24;
-      track.style.transform = `translateX(-${currentIndex * newCardWidth}px)`;
+      cardWidth = cards[0].offsetWidth + 24;
+      updateSlider();
     });
+
+    updateSlider();
   }
-});
+}
+
+// Initialize both sliders
+initSlider(".project-slider", ".project-card");
+initSlider(".achievement-slider", ".achievement-card");
+})
