@@ -915,3 +915,21 @@ input:checked + .slider:before {
     font-size: 3.2rem;
   }
 }
+
+.main-content, #about, #skills, #projects, #achievements {
+  animation: fadeUp linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.7);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
