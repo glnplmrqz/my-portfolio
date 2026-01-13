@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Glen Paul Marquez</title>
+  <link rel="shortcut icon" href="../IMAGES/fav-icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </script>
+  <link rel="stylesheet" href="homepage.css" />
+</head>
+
+<body>
+
+  <!-- Hamburger Menu Button -->
+  <div id="menuToggle">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <div class="profile-info">
+      <a href="#home">Glen Paul Marquez</a>
+      <div id="download-resume">
+        <a href="RESUME.pdf" target="_blank"> <i class="fas fa-download" style="margin-right:8px;"></i>
+          Resume</a>
+      </div>
+    </div>
+
+    <nav class="nav-links" id="nav-links">
+      <ul>
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> <span>About</span></a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> <span>Skills</span></a></li>
+        <li><a href="#projects"><i class="fas fa-folder"></i> <span>Projects</span></a></li>
+        <li><a href="#achievements"><i class="fa-solid fa-medal"></i><span>Achievements</span></a></li>
+      </ul>
+      <div class="theme-toggle">
+        <span class="toggle-label">Dark Mode</span>
+        <label class="toggle-switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div id="footer">
+        <p>&copy Glen Paul Marquez</p>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Home Section -->
+    <section id="home" class="section-flex-center">
+      <div class="home-flex">
+        <div class="home-content">
+          <h1>Hi, I'm <span>Paul</span></h1>
+          <p class="static-text">Aspiring <span class="typing-text"></span></p>
+
+          <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/glnplmrqz" target="_blank" class="social-btn" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/glnplmrqz" target="_blank" class="social-btn" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://t.me/glnplmrqz" target="_blank" class="social-btn" title="LinkedIn">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="mailto:glenpaulmarquez@gmail.com" class="social-btn" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="home-image">
+          <img src="../IMAGES/Formal Pic.png" alt="Glen Paul Marquez">
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Hi, I'm Glen Paul Marquez and currently a 3rd year student at Colegio de Montalban. I am pursuing a
+            <span>Bachelor of Technology and Livelihood Education Major in Information and Communication</span>.
+          </p>
+          <p>Since I was a kid, I've dreamed of creating websites, software, and games. My first programming language
+            was <span>Java</span> when I was in grade 11 during senior high school, and since then I've learned other
+            basic programming languages such as <span>C, C++, C# and Python</span>.</p>
+          <p>Currently, I'm studying Web Development including <span>HTML, CSS and JavaScript</span>. My biggest dream
+            is to become a <span>Full Stack Developer</span>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <p style="text-align: center;">I have basic knowledge in the following Programming Languages:</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="../IMAGES/C.png" alt="C Language">
+          </div>
+          <h3>C Programming Language</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="../IMAGES/C++.png" alt="C++ Language">
+          </div>
+          <h3>C++ Programming Language</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="../IMAGES/C-Sharp.png" alt="C# Language">
+          </div>
+          <h3>C# Programming Language</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="../IMAGES/Java.png" alt="Java Language">
+          </div>
+          <h3>Java Programming Language</h3>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">
+            <img src="../IMAGES/Python.png" alt="Python Language">
+          </div>
+          <h3>Python Programming Language</h3>
+        </div>
+        <div class="skill-card skill-html-css">
+          <div class="skill-icon">
+            <img src="../IMAGES/HTML.png" alt="HTML5" style="margin-right: 10px;">
+            <img src="../IMAGES/CSS.png" alt="CSS3">
+            <img src="../IMAGES/JavaScript.png" alt="JavaScript">
+          </div>
+          <h3>HTML5, CSS3, & JavaScript</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="project-slider">
+        <button class="slider-btn slider-btn-left" aria-label="Previous Project">&#10094;</button>
+
+        <div class="slider-track">
+          <div class="project-card">
+            <img src="../IMAGES/website-shs.png" alt="Website-SHS">
+            <h3>First Website Project using HTML, CSS & JavaScript (SHS)</h3>
+            <a href="https://glnplmrqz.github.io/website-shs" target="_blank">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <img src="../IMAGES/cdm-mock.png" alt="CDM Mock-up Website">
+            <h3>Colegio de Montalban Mock-up Website</h3>
+            <a href="https://glnplmrqz.github.io/cdm-website-project" target="_blank">View Project</a>
+          </div>
+
+          <div class="project-card">
+            <img src="../IMAGES/Coffee Shop.PNG" alt="CDM Mock-up Website">
+            <h3>Coffee Shop POS System</h3>
+            <a href="https://github.com/glnplmrqz/coffee-shop-pos" target="_blank">View Project</a>
+          </div>
+
+        </div>
+        <button class="slider-btn slider-btn-right" aria-label="Next Project">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+      <h2 class="section-title">Achievements</h2>
+      <div class="achievement-slider">
+        <button class="slider-btn slider-btn-left" aria-label="Previous Achievement">&#10094;</button>
+
+        <div class="slider-track">
+
+           <div class="achievement-card">
+            <img src="../IMAGES/Data Visualization Workshop (Jan 10) - Certificate of Participation.webp" alt="Achievement 4">
+            <h3>Data Visualization Workshop</h3>
+          </div>
+
+          <div class="achievement-card">
+            <img src="../IMAGES/AI-SUPPORTED STUDENT ENGAGEMENT AND GAMIFIED QUIZZING WITH QUIZALIZE.webp" alt="Achievement 3">
+            <h3>AI-SUPPORTED STUDENT ENGAGEMENT AND GAMIFIED QUIZZING WITH QUIZALIZE</h3>
+          </div>
+          
+           <div class="achievement-card">
+            <img src="../IMAGES/BATCH 8 - HOUR OF CODE CERTIFICATION.webp" alt="Achievement 2">
+            <h3>Batch 8 - Hour of Code Certification</h3>
+          </div>
+
+          <div class="achievement-card">
+            <img
+              src="../IMAGES/AI-Powered Future Mastering Prompt Engineering in Generative AI Certification - MARQUEZ.webp"
+              alt="Achievement 1">
+            <h3>AI-Powered Future Mastering Prompt Engineering in Generative AI Certification</h3>
+          </div>
+
+        </div>
+        <button class="slider-btn slider-btn-right" aria-label="Next Achievement">&#10095;</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
