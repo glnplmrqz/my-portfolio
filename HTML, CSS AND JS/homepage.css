@@ -367,7 +367,7 @@ input:checked + .slider:before {
 }
 
 .home-image img {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   border-radius: 50%;
   box-shadow: var(--shadow);
