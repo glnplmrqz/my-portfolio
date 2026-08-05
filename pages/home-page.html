@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | GP</title>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="../assets/images/fav-icon.png" type="image/x-icon" />
+
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" />
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="../assets/css/home-page.css" />
+</head>
+
+<body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+        <i class="fa fa-bars"></i>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar d-flex flex-column">
+
+        <!-- Logo -->
+        <div class="text-center">
+            <!-- Image Logo -->
+            <a href="#home"><img src="../assets/images/personal-logo.png" alt="GP Logo" class="logo img-fluid"/></a>
+        </div>
+
+        <!-- Resume Button -->
+        <div class="download-container">
+            <a href="../assets/document/RESUME.pdf" target="_blank" class="btn-download-resume">
+                <i class="fas fa-download me-2"></i>
+                Resume
+            </a>
+        </div>
+
+        <!-- Navigation -->
+        <ul class="nav nav-pills flex-column gap-2">
+            <li class="nav-item">
+                <a href="#home" class="nav-link active">
+                    <i class="fas fa-house"></i>
+                    Home
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    About
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#skills" class="nav-link">
+                    <i class="fas fa-code"></i>
+                    Skills
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-folder"></i>
+                    Projects
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="#achievements" class="nav-link">
+                    <i class="fas fa-medal"></i>
+                    Achievements
+                </a>
+            </li>
+        </ul>
+
+        <!-- Dark Mode -->
+        <div class="theme-toggle">
+            <span class="toggle-text">Dark Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <!-- Footer -->
+        <footer class="sidebar-footer">
+            <p>&copy Glen Paul Marquez</p>
+        </footer>
+    </aside>
+
+    <main class="main-content" class="section-flex-center">
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-flex">
+                <div class="home-content">
+                    <h1>Hi, I'm <span>Paul</span></h1>
+                    <span class="typing-text"></span>
+
+                    <div class="social-container">
+                        <a href="https://www.linkedin.com/in/glnplmrqz" target="_blank" class="social-btn"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+
+                        <a href="https://github.com/glnplmrqz" target="_blank" class="social-btn" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="https://t.me/glnplmrqz" target="_blank" class="social-btn" title="LinkedIn">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+
+                        <a href="mailto:glenpaulmarquez@gmail.com" class="social-btn" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="home-image">
+                    <img src="../assets/images/fav-icon.png" alt="Glen Paul Marquez">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+
+                <div class="about-text">
+                    <!-- First -->
+                    <p>Hi, I'm Glen Paul Marquez and currently a 4th year student at Colegio de Montalban. I am pursuing
+                        a
+                        <span>Bachelor of Technology and Livelihood Education Major in Information and Communications
+                            Technology</span>.
+                    </p>
+
+                    <!-- Second -->
+                    <p>My tech stack includes <span>Java, C, C++, C#, Python, and core web technologies — HTML, CSS, and
+                            JavaScript</span>.</p>
+
+                    <!-- Third -->
+                    <p>I enjoy turning ideas into functional, clean, and responsive web solutions. Now open to junior
+                        developer roles and freelance opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="infinite-carousel">
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="../assets/images/C.png" alt="C Language">
+                        </div>
+                        <h3>C Programming Language</h3>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="../assets/images/C++.png" alt="C++ Language">
+                        </div>
+                        <h3>C++ Programming Language</h3>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="../assets/images/C-Sharp.png" alt="C# Language">
+                        </div>
+                        <h3>C# Programming Language</h3>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="../assets/images/Java.png" alt="Java Language">
+                        </div>
+                        <h3>Java Programming Language</h3>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="../assets/images/Python.png" alt="Python Language">
+                        </div>
+                        <h3>Python Programming Language</h3>
+                    </div>
+
+                    <div class="skill-card skill-html-css">
+                        <div class="skill-icon">
+                            <img src="../assets/images/HTML.png" alt="HTML5">
+                            <img src="../assets/images/CSS.png" alt="CSS3">
+                            <img src="../assets/images/JavaScript.png" alt="JavaScript">
+                        </div>
+                        <h3>HTML5, CSS3 & JavaScript</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Section -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
+
+            <div class="project-slider">
+
+                <div class="project-view">
+                    <div class="project-card">
+                        <img src="../assets/images/website-shs.png" alt="Website-SHS">
+                        <h3>First Website Project using HTML, CSS & JavaScript (SHS)</h3>
+                        <a href="https://glnplmrqz.github.io/website-shs" target="_blank">View Project</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="../assets/images/cdm-mock.png" alt="CDM Mock-up Website">
+                        <h3>Colegio de Montalban Mock-up Website</h3>
+                        <a href="https://glnplmrqz.github.io/cdm-website-project" target="_blank">View Project</a>
+                    </div>
+
+                    <div class="project-card">
+                        <img src="../assets/images/Coffee Shop.PNG" alt="CDM Mock-up Website">
+                        <h3>Coffee Shop POS System</h3>
+                        <a href="https://github.com/glnplmrqz/coffee-shop-pos" target="_blank">View Project</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <h2 class="section-title">Achievements</h2>
+            <div class="infinite-carousel">
+                <div class="achievement-cert">
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/DOST - Introduction to Google AI.webp" alt="Achievement 21">
+                        <h3>Introduction to Google AI</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/freeCodeCamp Responsive Web Design.webp" alt="Achievement 20">
+                        <h3>Responsive Web Design</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Legacy Responsive Web Design V8.webp" alt="Achievement 19">
+                        <h3>Legacy Responsive Web Design V8</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/WEBINAR SERIES ON PEDAGOGY OF EDUCATIONAL TECHNOLOGY.webp"
+                            alt="Achievement 18">
+                        <h3>From ILAW Plans to SMART Slides: A Comprehensive Guide to AI-Powered Instructional Design
+                        </h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/DOST RIZAL.webp" alt="Achievement 17">
+                        <h3>Content Creation using ChatGPT and Canva </h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Basic Web Development Workshop - Certificate of Participation.webp"
+                            alt="Achievement 16">
+                        <h3>Basic Web Development Workshop</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Hackerrank Certificate.webp" alt="Achievement 15">
+                        <h3>C# Basic Certificate of Accomplishment</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/NEXTGURO AI.webp" alt="Achievement 14">
+                        <h3>NextGuro AI for Teachers: Boost Planning, Save Time, Improve Workflow</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Creative Digitalization in Advertising and Marketing.webp"
+                            alt="Achievement 13">
+                        <h3>Creative Digitalization in Advertising/ Marketing</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Digital Safety.webp" alt="Achievement 12">
+                        <h3>DICT CAR - Digital Safety</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Artificial Intelligence for Education - Unlocking the Power of NotebookLM.webp"
+                            alt="Achievement 11">
+                        <h3>Artificial Intelligence for Education: Unlocking the Power of NotebookLM</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Utilizing AI to Develop Interactive and Personalized.webp"
+                            alt="Achievement 10">
+                        <h3>Utilizing AI to Develop Interactive and Personalized Storybooks</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Foundational C Sharp with Microsoft Certificate.webp"
+                            alt="Achievement 9">
+                        <h3>FreeCodeCamp - Foundational C# with Microsoft Certificate</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/AI Class ASEAN.webp" alt="Achievement 8">
+                        <h3>ASEAN Foundation - Completing 12 Hours AI Learning Module on AI Class ASEAN</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/The AI-Assisted Researcher Optimizing Research Workflows.webp"
+                            alt="Achievement 7">
+                        <h3>The AI-Assisted Researcher: Optimizing Research Workflows through a Multi-Platform Approach
+                        </h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Artificial Intelligence in Action Research (Atlas.ti, Literature).webp"
+                            alt="Achievement 6">
+                        <h3>Artificial Intelligence in Action Research (Atlas.ti, Literature Review, Gaps Analysis)</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Access, Awareness, Innovation and Security.webp" alt="Achievement 5">
+                        <h3>DICT-CAR - Access, Awareness, Innovation and Security</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/Data Visualization Workshop (Jan 10) - Certificate of Participation.webp"
+                            alt="Achievement 4">
+                        <h3>Zuitt - Data Visualization Workshop</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/AI-SUPPORTED STUDENT ENGAGEMENT AND GAMIFIED QUIZZING WITH QUIZALIZE.webp"
+                            alt="Achievement 3">
+                        <h3>EDTECH Teacher Training Center -AI-SUPPORTED STUDENT ENGAGEMENT AND GAMIFIED QUIZZING WITH
+                            QUIZALIZE</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/BATCH 8 - HOUR OF CODE CERTIFICATION.webp" alt="Achievement 2">
+                        <h3>ASEAN Foundation - Batch 8 - Hour of Code Certification</h3>
+                    </div>
+
+                    <div class="achievement-card">
+                        <img src="../assets/images/AI-Powered Future Mastering Prompt Engineering in Generative AI Certification - MARQUEZ.webp"
+                            alt="Achievement 1">
+                        <h3>DICT Region V - AI-Powered Future Mastering Prompt Engineering in Generative AI
+                            Certification</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Hamburger Menu JS -->
+    <script src="../assets/js/hamburger-menu.js"></script>
+
+    <!-- Typing Effect JS -->
+    <script src="../assets/js/typing-animation.js"></script>
+
+    <!-- Update Scroll JS -->
+    <script src="../assets/js/update-scroll.js"></script>
+
+    <!-- Project Carousel Slider JS -->
+    <script src="../assets/js/carousel-slider.js"></script>
+
+    <!-- Achievement Carousel Slider JS -->
+    <script src="../assets/js/achievement-carousel-slider.js"></script>
+
+    <!-- Dark Mode JS -->
+    <script src="../assets/js/dark-mode.js"></script>
+
+    <!-- Infinite Carousel -->
+    <script src="../assets/js/infinite-carousel.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
