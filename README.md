@@ -1,12 +1,10 @@
 <h1 align="center">Portfolio</h1>
 
 ## Light Mode: 
-<img width="1366" height="731" alt="image" src="<img width="1350" height="607" alt="image" src="https://github.com/user-attachments/assets/a7757149-8e0b-4e36-bd1e-1e105340d3f3" />
-" />
+<img width="1350" height="607" alt="image" src="https://github.com/user-attachments/assets/a7757149-8e0b-4e36-bd1e-1e105340d3f3"/>
 
 ## Dark Mode: 
-<img width="1366" height="730" alt="image" src="<img width="1361" height="605" alt="image" src="https://github.com/user-attachments/assets/69df881c-4b39-4e31-b851-0194573a369a" />
-" />
+<img width="1361" height="605" alt="image" src="https://github.com/user-attachments/assets/69df881c-4b39-4e31-b851-0194573a369a"/>
 
 ## 🚀 About The Project
 A modern, responsive portfolio website showcasing my skills, projects, and journey as a developer. Built with pure HTML, CSS, and JavaScript to demonstrate fundamental web development skills. (https://glnplmrqz.vercel.app/)
