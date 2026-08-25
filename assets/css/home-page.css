@@ -384,7 +384,6 @@ body {
 
 .skill-card {
   width: 220px;
-  min-width: 220px;
   background: var(--container-bg-color);
   border-radius: 18px;
   padding: 2rem 1rem;

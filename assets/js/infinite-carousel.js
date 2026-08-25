@@ -5,26 +5,24 @@ function infiniteCarousel(trackSelector, speed) {
 
     if(!track) return;
 
-    function move(){
-        const firstCard = track.firstElementChild;
-        const gap = parseFloat(getComputedStyle(track).gap);
-        const moveDistance = firstCard.offsetWidth + gap;
+    const cards = Array.from(track.children);
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    const loopWidth = cards.reduce((width, card) => width + card.offsetWidth, 0)
+        + gap * (cards.length - 1);
 
-        track.style.transition = `transform ${speed}s linear`;
-        track.style.transform = `translateX(-${moveDistance}px)`;
+    cards.forEach((card) => track.appendChild(card.cloneNode(true)));
 
-        track.addEventListener("transitionend", function handler() {
-            track.style.transition = "none";
-            track.appendChild(firstCard);
-            track.style.transform = "translateX(0)";
-            track.removeEventListener("transitionend", handler);
-
-            // To Loop Again
-            requestAnimationFrame(move);
-        });
-    }
-        // Calling Function
-        move();
+    track.animate(
+        [
+            { transform: "translateX(0)" },
+            { transform: `translateX(-${loopWidth}px)` }
+        ],
+        {
+            duration: cards.length * speed * 1000,
+            iterations: Infinity,
+            easing: "linear"
+        }
+    );
 }
 
 // Initializing
