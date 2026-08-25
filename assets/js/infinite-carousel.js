@@ -1,6 +1,6 @@
 // Infinite Carousel Effects For Skills and Achievements
 
-function infiniteCarousel(trackSelector, speed = 3) {
+function infiniteCarousel(trackSelector, speed) {
     const track = document.querySelector(trackSelector);
 
     if(!track) return;
