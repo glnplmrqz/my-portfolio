@@ -18,6 +18,7 @@ document.onkeydown = e => {
 
 document.querySelectorAll('.achievement-card img, .project-card img').forEach(img => {
     img.addEventListener('click', () => {
-        window.open(img.src, "_blank");
+        const absolutePath = `${window.location.origin}${img.getAttribute('src').replace('..','')}`;
+        window.open(absolutePath, "_blank");
     })
 });
