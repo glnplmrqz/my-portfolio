@@ -606,12 +606,14 @@ body {
   }
 
   #home {
+    min-height: auto;
     padding: 5rem 0 2rem;
   }
 
   .home-flex {
     flex-direction: column-reverse;
     text-align: center;
+    gap: 2rem;
   }
 
   .home-content {
@@ -623,7 +625,7 @@ body {
   }
 
   .typing-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .home-image img {
