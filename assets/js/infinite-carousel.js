@@ -27,4 +27,3 @@ function infiniteCarousel(trackSelector, speed) {
 
 // Initializing
 infiniteCarousel('.skills-grid', 2);
-infiniteCarousel('.achievement-cert', 2);
