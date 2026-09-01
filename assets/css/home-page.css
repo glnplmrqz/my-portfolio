@@ -591,7 +591,7 @@ body {
   .sidebar {
     width: 100%;
     transform: translateX(-100%);
-    padding: 4rem;
+    padding: 3rem;
     transition: transform 0.3s ease;
   }
 
@@ -666,19 +666,14 @@ body {
     flex: 0 0 100%;
   }
 
-  .project-card h3 {
-    min-height: auto;
-    padding: 1rem;
+  .project-card h3, .achievement-card h3 {
+    min-height: 2.7rem;
+    margin-top: 0.5rem;
     font-size: 1rem;
   }
 
   .achievement-card {
     flex: 0 0 100%;
-  }
-
-  .achievement-card h3 {
-    min-height: max-content;
-    font-size: 0.85rem;
   }
 
   .theme-toggle {
