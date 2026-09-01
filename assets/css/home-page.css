@@ -401,7 +401,6 @@ body {
   width: 100%;
   height: 65px;
   object-fit: contain;
-  cursor: pointer;
 }
 
 .skill-card h3 {
@@ -446,6 +445,7 @@ body {
   width: 100%;
   object-fit: contain;
   object-position: center;
+  cursor: pointer;
 }
 
 .project-card h3 {
@@ -515,7 +515,6 @@ body {
   width: 100%;
   height: clamp(160px, 20vw, 240px);
   object-fit: contain;
-  cursor: pointer;
 }
 
 .achievement-card h3 {
@@ -593,7 +592,7 @@ body {
   .sidebar {
     width: 100%;
     transform: translateX(-100%);
-    padding: 3rem;
+    padding: 4rem;
     transition: transform 0.3s ease;
   }
 
@@ -608,14 +607,12 @@ body {
   }
 
   #home {
-    min-height: auto;
     padding: 5rem 0 2rem;
   }
 
   .home-flex {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 2rem;
   }
 
   .home-content {
@@ -627,7 +624,7 @@ body {
   }
 
   .typing-text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .home-image img {
@@ -668,14 +665,19 @@ body {
     flex: 0 0 100%;
   }
 
-  .project-card h3, .achievement-card h3 {
-    min-height: 2.7rem;
-    margin-top: 0.5rem;
+  .project-card h3 {
+    min-height: auto;
+    padding: 1rem;
     font-size: 1rem;
   }
 
   .achievement-card {
     flex: 0 0 100%;
+  }
+
+  .achievement-card h3 {
+    min-height: max-content;
+    font-size: 0.85rem;
   }
 
   .theme-toggle {
