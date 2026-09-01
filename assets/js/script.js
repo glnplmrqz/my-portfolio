@@ -11,3 +11,9 @@ document.onkeydown = e => {
         return false;
     }
 }
+
+document.querySelectorAll('.achievement-card img, .project-card img').forEach(img => {
+    img.addEventListener('click', () => {
+        window.open(img.src, "_blank");
+    })
+});
