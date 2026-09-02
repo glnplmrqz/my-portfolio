@@ -1,15 +1,20 @@
-<h1 align="center">Portfolio</h1>
+## Introduction
+Welcome to my personal portfolio website! This project is a reflection of my journey as a developer, showcasing the skills I’ve learned, the projects I’ve built, and the passion I have for creating clean, responsive, and user‑friendly web applications.
 
-## Light Mode: 
-<img width="1350" height="607" alt="image" src="https://github.com/user-attachments/assets/a7757149-8e0b-4e36-bd1e-1e105340d3f3"/>
+The goal of this portfolio is not only to present my work but also to demonstrate my ability to design and develop modern websites using fundamental technologies like HTML, CSS, and JavaScript. Every element — from the layout to the animations — has been carefully crafted to highlight both creativity and technical competence.
 
-## Dark Mode: 
-<img width="1361" height="605" alt="image" src="https://github.com/user-attachments/assets/69df881c-4b39-4e31-b851-0194573a369a"/>
+Whether you’re a recruiter, collaborator, or fellow developer, I hope this portfolio gives you a clear picture of my capabilities and inspires future opportunities for growth and collaboration.
+
+## Light Mode
+<img width="1362" height="610" alt="image" src="https://github.com/user-attachments/assets/3be9beec-a2ec-4cec-9913-23ef98b168a1" />
+
+## Dark Mode
+<img width="1360" height="611" alt="image" src="https://github.com/user-attachments/assets/e4f61134-59d1-4a15-afb6-0f71d6801716" />
 
 ## 🚀 About The Project
 A modern, responsive portfolio website showcasing my skills, projects, and journey as a developer. Built with pure HTML, CSS, and JavaScript to demonstrate fundamental web development skills. (https://glnplmrqz.vercel.app/)
 
-## ✨ Features
+## Features
 - Responsive Design: Optimized for desktop, tablet, and mobile devices
 - Modern UI: Clean and professional interface with smooth animations
 - Project Showcase: Dedicated section for displaying completed projects
@@ -17,7 +22,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and journ
 - Contact Form: Functional contact form for potential collaborations
 - Fast Loading: Optimized assets and efficient code structure
 
-## 🛠️ Tech Stack
+## Tech Stack
 - Frontend: HTML5, CSS3, JavaScript (ES6+)
 - Styling: CSS Grid, Flexbox, CSS Animations
 - Version Control: Git & GitHub
@@ -25,14 +30,14 @@ A modern, responsive portfolio website showcasing my skills, projects, and journ
 - Icons: Font Awesome / Material Icons
 - Fonts: Google Fonts (Open Sans, Poppins, etc.)
 
-## 🎨 Design Highlights
+## Design Highlights
 - Color Scheme: Professional color palette with primary and accent colors
 - Typography: Carefully selected font pairing for readability
 - Animations: Subtle hover effects and scroll animations
 - Layout: Grid-based layout with consistent spacing
 - Navigation: Intuitive menu with smooth scrolling
 
-## 🚀 Getting Started
+## Getting Started
 Prerequisites
 - Web browser (Chrome, Firefox, Safari, Edge)
 - Code editor (VS Code recommended)
@@ -45,7 +50,7 @@ Prerequisites
    - cd my-portfolio
 3. Open index.html in your browser or use a local server.
 
-## 🔧 Customization
+## Customization
 - To customize this portfolio for your own use:
 - Update personal information in index.html
 - Replace project details and images
@@ -53,17 +58,17 @@ Prerequisites
 - Add your own skills and experiences
 - Update social media links
 
-## 📈 Performance Features
+## Performance Features
 - Optimized images and assets
 - Minified CSS and JavaScript
 - Lazy loading for images
 - Efficient CSS selectors
 - Clean semantic HTML structure
 
-## 🤝 Contributing
+## Contributing
 - While this is a personal portfolio, suggestions and improvements are welcome! Feel free to:
 - Report bugs or issues
 - Suggest new features
 - Submit pull requests for improvements
 
-📧 Email: glenpaulmarquez01@gmail.com
+Email: glenpaulmarquez01@gmail.com
