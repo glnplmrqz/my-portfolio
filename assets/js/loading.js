@@ -13,7 +13,7 @@ function redirectToHomepage() {
 }
 
 // Set timeout for redirect
-setTimeout(redirectToHomepage, 2000);
+setTimeout(redirectToHomepage, 3000);
 
 // Also redirect on click/touch for better UX
 document.addEventListener("click", redirectToHomepage);
